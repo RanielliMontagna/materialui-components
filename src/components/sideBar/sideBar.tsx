@@ -3,6 +3,7 @@ import {
   AiOutlineDashboard,
   AiOutlineFileText,
   AiOutlineRead,
+  AiOutlineTable,
 } from "react-icons/ai";
 import { MdOutlineFeedback } from "react-icons/md";
 
@@ -21,8 +22,14 @@ const SideBar = () => {
 
   return (
     <SideBarContainer>
-      <SideBarHeader onClick={() => window.open("https://chakra-ui.com/")}>
-        Chakra UI
+      <SideBarHeader
+        onClick={() =>
+          window.open(
+            "https://mui.com/pt/material-ui/getting-started/overview/"
+          )
+        }
+      >
+        Material UI
       </SideBarHeader>
       <SideBarContent>
         <Route onClick={() => _navigate("/")}>
@@ -47,6 +54,12 @@ const SideBar = () => {
           <Icon component={AiOutlineFileText} width={6} height={6} />
           <Typography variant="body2" style={{ color: palette.grey[300] }}>
             Fields
+          </Typography>
+        </Route>
+        <Route onClick={() => _navigate("/dataTable")}>
+          <Icon component={AiOutlineTable} width={6} height={6} />
+          <Typography variant="body2" style={{ color: palette.grey[300] }}>
+            DataTable
           </Typography>
         </Route>
       </SideBarContent>

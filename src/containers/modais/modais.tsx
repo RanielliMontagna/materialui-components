@@ -1,9 +1,16 @@
 import { Grid } from "@mui/material";
+import { FormModal } from "./formModal/formModal";
+import { SimplesModal } from "./simpleModal/simpleModal";
 
 const Modais = () => {
   return (
-    <Grid container>
-      <Grid item xs={12}></Grid>
+    <Grid container padding={2} gap={2}>
+      <Grid item flex={1}>
+        <SimplesModal />
+      </Grid>
+      <Grid item flex={1}>
+        <FormModal />
+      </Grid>
     </Grid>
   );
 };
